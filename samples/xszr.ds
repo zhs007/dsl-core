@@ -1,0 +1,50 @@
+
+typedef int UserID;		// 玩家ID类型
+typedef int HeroID;		// HeroID类型
+typedef int MsgID;		// 消息ID
+
+MsgID REQ_MSGID_BEGIN = 10000;	// 请求消息的起点，如果不设置这个值，系统也会给一个默认值的
+MsgID RES_MSGID_BEGIN = 20000;	// 响应消息的起点，如果不设置这个值，系统也会给一个默认值的
+
+// hero类型
+enum HEROTYPE{
+	HEROTYPE_ATTACK = 0;		// 战斗型
+	HEROTYPE_SKILL = 1;			// 技巧型
+};
+
+// 武器类型
+enum EQUTYPE{
+	EQUTYPE_BILLY = 0;			// 棍棒
+	EQUTYPE_GUN = 1;			// 手枪
+	EQUTYPE_SHOTGUN = 2;		// 手枪
+	EQUTYPE_MACHINEGUN = 3;		// 机枪
+	EQUTYPE_ARROW = 4;			// 弓箭
+	EQUTYPE_SWORD = 5;			// 刀
+};
+
+// 僵尸类型
+enum ZOMBIETYPE{
+	ZOMBIETYPE_NORMAL = 0;		// 普通
+	ZOMBIETYPE_SPEED = 1;		// 速度
+	ZOMBIETYPE_ATTACK = 2;		// 攻击
+	ZOMBIETYPE_DEF = 3;			// 防御
+	ZOMBIETYPE_HP = 4;			// 体力
+};
+
+// Hero静态属性
+static HeroStatic{
+	primary HeroID heroid;			// heroid
+	
+	string name;					// name
+
+	HEROTYPE type;					// 类型
+	EQUTYPE equtype;				// 武器类型
+
+	int hp;							// hp
+	int act;						// act
+	int def;						// def
+	int speed;						// speed
+	int luck;						// luck
+	int critical;					// 暴击
+	int dodge;						// 闪避
+};
