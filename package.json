@@ -1,0 +1,35 @@
+{
+  "name": "dsl-core",
+  "version": "0.6.0",
+  "latest": "0.6.0",
+  "description": "dsl-core",
+  "keywords": [
+    "dsl-core",
+    "ds-lang"
+  ],
+  "preferGlobal": false,
+  "config": {
+    "publishtest": false
+  },
+  "homepage": "http://www.heysdk.com/",
+  "author": {
+    "name": "zhs007",
+    "email": "sssxueren@gmail.com",
+    "url": "http://www.heysdk.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhs007/dsl-core"
+  },
+  "bugs": {
+    "url": "https://github.com/zhs007/dsl-core/issues",
+    "email": "sssxueren@gmail.com"
+  },
+  "main": "./lib/index.js",
+  "dependencies": {
+    "node-xlsx": "*",
+    "handlebars": "*"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
