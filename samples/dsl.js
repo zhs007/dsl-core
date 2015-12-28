@@ -22,6 +22,7 @@ output = dslcore.reverseObj(output);
 
 console.log('dslang compile finished!');
 fs.writeFileSync('xszr.json', JSON.stringify(output), 'utf-8');
+fs.writeFileSync('xszr.json.' + dslcore.getVer(output), JSON.stringify(output), 'utf-8');
 
 dslcore.exportExcel('xszr', output, function (isok, err) {
     if (!isok) {

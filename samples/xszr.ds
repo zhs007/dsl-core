@@ -1,4 +1,6 @@
 
+int VER = 1512280;		// 版本号
+
 typedef int UserID;		// 玩家ID类型
 typedef int HeroID;		// HeroID类型
 typedef int MsgID;		// 消息ID
@@ -33,18 +35,18 @@ enum ZOMBIETYPE{
 
 // Hero静态属性
 static HeroStatic{
-	primary HeroID heroid;			// heroid
+	primary HeroID heroid;			// hero标识
 	
-	string name;					// name
+	string name;					// 名字
 
-	HEROTYPE type;					// 类型
+	HEROTYPE type;					// hero类型
 	EQUTYPE equtype;				// 武器类型
 
-	int hp;							// hp
-	int act;						// act
-	int def;						// def
-	int speed;						// speed
-	int luck;						// luck
+	int hp;							// 生命值
+	int act;						// 攻击力
+	int def;						// 防御力
+	int speed;						// 速度
+	int luck;						// 幸运
 	int critical;					// 暴击
 	int dodge;						// 闪避
 };
