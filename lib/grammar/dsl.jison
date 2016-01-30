@@ -37,6 +37,7 @@
 "time"                return "TYPE_TIME"
 "bytes"               return "TYPE_BYTES"
 "bool"                return "TYPE_BOOL"
+"float"               return "TYPE_FLOAT"
 "true"                return "BOOL_TRUE"
 "false"               return "BOOL_FALSE"
 0|-0|-[1-9]\d*\.\d*|[1-9]\d*\.\d*|-0\.\d*|0\.\d*|[1-9]\d*|-[1-9]\d*    return 'NUMBER'
@@ -149,6 +150,8 @@ typestr:
   TYPE_BYTES {$$ = {type:'bytes', name: $1}}
   |
   TYPE_BOOL {$$ = {type:'bool', name: $1}}
+  |
+  TYPE_FLOAT {$$ = {type:'float', name: $1}}
   |
   WORD {$$ = {type:getVal($1), name: $1}}
   ;
